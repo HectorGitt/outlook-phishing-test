@@ -95,6 +95,13 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
                                 <div>
                                 <small>You may review this app's terms of service and . You can remove this or any other app connected to your account in </small>
                                 </div>
+                                <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
+                                  <Toast.Body>
+                                    <p> Mousing over this link or using a long press will show you that it goes to the insecure imitation domain “drive--outlook.com”. </p>
+                                    <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
+                                    
+                                  </Toast.Body>
+                                </Toast>
                                 <Button className="mt-4">Allow</Button>
                             
                                 
