@@ -5,7 +5,7 @@ import Correct from '../Correct';
 import Options from '../buttons/Options';
 import ShowMe from '../buttons/ShowMe';
 import ToastWrapper from '../layout/ToastWrapper';
-import { FaRegShareSquare, FaFilePdf } from "react-icons/fa";
+import { FaRegShareSquare} from "react-icons/fa";
 import pdf from "../../images/pdf.png"
 
 
