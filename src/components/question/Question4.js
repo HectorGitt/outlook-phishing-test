@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import { Container, Button, Card, Navbar, Toast} from 'react-bootstrap'; 
 import {FaDropbox} from "react-icons/fa"
 import MailSubject from '../MailSubject';
-import Correct from '../Correct';
 import Options from '../buttons/Options';
 import ShowMe from '../buttons/ShowMe';
 import ToastWrapper from '../layout/ToastWrapper';
@@ -58,7 +57,7 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
                 <h1 className='text-white'>
                     {(step === 0)?
                     "Uh oh! It looks like you're out of storage!" 
-                    : (correct)? <Correct /> : "Incorrect. Not everything is bad!" }</h1> 
+                    : (correct)? "Correct!" : "Incorrect. Not everything is bad!" }</h1> 
                 {(step === 0)?
                 <>
                 <p>I wonder what it costs to upgrade?</p>

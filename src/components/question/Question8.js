@@ -57,7 +57,7 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
             <h1 className='text-white'>
                     {(step === 0)?
                     "Your account seems to be under attack again." 
-                    : (correct)? "This is actually legitimate." : "This is actually legitimate." }</h1> 
+                    : (correct)? "Correct! This is legitimate." : "This is actually legitimate." }</h1> 
                 {(step === 0)?
                 <>
                 <p>Or is it?</p>
@@ -66,7 +66,7 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
                 : 
                 ((correct)?
                 <>
-                <p>The hackers tried to use Google to hide the actual link, which is from tinyurl. An email similar to this was used to target think tanks and politicians.</p>
+                <p>It's important to be cautious with these kinds of account access requests though, and to be sure you trust the developer. Check the domain that is displayed, and be sure to click on it for more details.</p>
                 <ShowMe handleStep={handleStep} step={step}/>
                 </>
                 :

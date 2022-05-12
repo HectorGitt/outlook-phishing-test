@@ -4,6 +4,7 @@ import MailSubject from '../MailSubject';
 import Options from '../buttons/Options';
 import Correct from '../Correct';
 import ShowMe from '../buttons/ShowMe';
+import ToastWrapper from '../layout/ToastWrapper';
 
 const Question3 = ({page, obj, handleNext, handleScore}) => {
   const [step, setStep] = useState(0)
@@ -62,7 +63,7 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
                 {(step === 0)?
                 <>
                 <p>Remember TK from school?</p>
-                Options handleCorrect={handleCorrect}/> 
+                <Options handleCorrect={handleCorrect}/> 
                 </>
                 : 
                 ((correct)?
@@ -79,7 +80,7 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
            </div>
         </Container>
         <Container className="" bg="success">
-          <Card className="card-lg">
+          <ToastWrapper className="card-lg">
                 <Card.Body>
                     <Card.Title>
                         <MailSubject/>
@@ -95,7 +96,7 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
                         </Toast>
                     </Card.Text>
                 </Card.Body>
-            </Card>
+            </ToastWrapper>
         </Container>
     </Container>
   )

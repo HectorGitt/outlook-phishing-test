@@ -56,7 +56,7 @@ const Question7 = ({page, handleNext, handleScore, obj}) => {
                 <h1 className='text-white'>
                     {(step === 0)?
                     "Your account seems to be under attack again." 
-                    : (correct)? "Correct. This is based on a real warning but links to a fake login page." : "This is actually a phishing email." }</h1> 
+                    : (correct)? "Correct. This is based on a real warning but links to a fake login page." : "Incorrect. This is based on a real warning but links to a fake login page." }</h1> 
                 {(step === 0)?
                 <>
                 <p>Or is it?</p>
@@ -70,7 +70,7 @@ const Question7 = ({page, handleNext, handleScore, obj}) => {
                 </>
                 :
                 <>
-                <p>This phish used a look-alike URL to masquerade as Gmail. In fact, this is almost identical to an attack used to successfully hack politicians’ emails. Always be sure to check URLs carefully!</p>
+                <p>The hackers tried to use Google to hide the actual link, which is from tinyurl. An email similar to this was used to target think tanks and politicians.</p>
                 <ShowMe handleStep={handleStep} step={step}/>
                 </>) 
                 }

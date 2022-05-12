@@ -61,7 +61,7 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
                 {(step === 0)?
                 <>
                 <p>Look carefully before changing your password.</p>
-                Options handleCorrect={handleCorrect}/> 
+                <Options handleCorrect={handleCorrect}/> 
                 </>
                 : 
                 ((correct)?

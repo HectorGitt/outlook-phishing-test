@@ -2,6 +2,7 @@ import React from 'react'
 import { Container} from 'react-bootstrap';
 import { Navbar, Dropdown, DropdownButton, Row, Col, Button } from 'react-bootstrap'
 import fail from "../images/result-fail.gif"
+import pass from "../images/result-neutral.gif"
 
 const EndPage = ({handleNext, score, name}) => {
   return (
@@ -29,7 +30,11 @@ const EndPage = ({handleNext, score, name}) => {
                     </Button>
                 </Col>
                 <Col xs={12} md={6}  className="">
+                    {(score < 5)?
                     <img className='mx-auto luck-img d-block fluid'  src={fail} alt="hand holding hook" />
+                    : <img className='mx-auto luck-img d-block fluid'  src={pass} alt="hand holding hook" />
+                    }
+                    
                 </Col>
             </Row>
         </Container>

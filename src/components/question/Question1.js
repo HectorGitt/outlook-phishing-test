@@ -74,12 +74,12 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
                 : 
                 ((correct)?
                 <>
-                <p>You must have spotted the look-alike URL. Be cautious about hyperlinks and attachments you open from emails — they may direct you to fraudulent websites where you're asked to input sensitive information.</p>
+                <p>The URL looks correct but is actually a look-alike. Be cautious about hyperlinks and attachments you open from emails — they may direct you to fraudulent websites where you're asked to input sensitive information.</p>
                 <ShowMe handleStep={handleStep} step={step}/>
                 </>
                 :
                 <>
-                <p>The sender's email domain is misspelled as “efacks” and the link actually points at “mailru382.co”. Phishing often tries to trick you with look-alike URLs.</p>
+                <p>The URL looks correct but is actually a look-alike. Be cautious about hyperlinks and attachments you open from emails — they may direct you to fraudulent websites where you're asked to input sensitive information.</p>
                 <ShowMe handleStep={handleStep} step={step}/>
                 </>) 
                 }
@@ -94,7 +94,7 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
                     <div>
                       <div className='container w-lg-50 w-sm-100 w-100 mx-auto'>
                         <Card className="text-center card-mdf w-lg-50 w-100 mx-auto">
-                            <Card.Body className='position-relative'>
+                            <Card.Body >
                                 <Card.Title>
                                     <p className='text-primary'> <FaRegShareSquare/> </p>
                                     <p>Someone Shared Something to you</p>
@@ -106,14 +106,17 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
                                     <img src={pdf} className="fluid" alt="" />
                                     <p>237888839383918727892892.pdf</p>
                                 </div>
-                                <Button variant="primary">Open</Button>
-                                <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
-                                  <Toast.Body>
-                                    <p> Mousing over this link or using a long press will show you that it goes to the insecure imitation domain “drive--outlook.com”. </p>
-                                    <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
-                                    
-                                  </Toast.Body>
-                                </Toast>
+                                <div className='position-relative mx-auto w-50'>
+                                  <Button variant="primary">Open</Button>
+                                  <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
+                                    <Toast.Body>
+                                      <p> Mousing over this link or using a long press will show you that it goes to the insecure imitation domain “drive--outlook.com”. </p>
+                                      <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
+                                      
+                                    </Toast.Body>
+                                  </Toast>
+                                </div>
+                                
                             </Card.Body>
                         </Card>
                       </div>
