@@ -17,7 +17,7 @@ const EndPage = ({handleNext, score, name}) => {
         </Navbar>
         <Container fluid="md" className="">
             <Row className="justify-content-center mt-5">
-                <Col xs={12}>
+                <Col xs={12} md={6}>
                     <h2 className="text-white">Good Effort, {name} <br/> You got {score}/8 correct.</h2>
                     <p>
                     Practice makes perfect and the more you understand what to look for, the safer you are from phishing attacks.
@@ -28,7 +28,7 @@ const EndPage = ({handleNext, score, name}) => {
                         Take The quiz again
                     </Button>
                 </Col>
-                <Col xs={12}  className="">
+                <Col xs={12} md={6}  className="">
                     <img className='mx-auto luck-img d-block fluid'  src={fail} alt="hand holding hook" />
                 </Col>
             </Row>

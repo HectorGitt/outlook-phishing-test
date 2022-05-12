@@ -3,7 +3,6 @@ import { Container, Navbar, Toast, ToastContainer, Button } from 'react-bootstra
 import { useState, useEffect, useRef } from 'react';
 import { MyVerticallyCenteredModal } from './Modal';
 import validator from 'validator';
-
 const SecondPage = ({setEmail, setName, handleNext}) => {
     const [showA, setShowA] = useState(false);
     const toggleShowA = () => setShowA(true);
