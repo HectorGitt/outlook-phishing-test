@@ -13,7 +13,7 @@ import Question8 from './components/question/Question8';
 import EndPage from './components/EndPage';
 
 function App() {
-  const [page, setPage] = useState(-1)
+  const [page, setPage] = useState(5)
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [score, setScore] = useState(0)

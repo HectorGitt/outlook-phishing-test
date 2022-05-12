@@ -83,7 +83,7 @@ const Question2 = ({page, handleScore, handleNext, obj}) => {
                 <Toast.Body>
                     <Card.Title>
                         <MailSubject/>
-                        <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
+                        <Toast  show={showpop} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>
                             <p> The sender address is “efacks.com”, which is misspelled. On the next question, try exploring the header for more details.</p>
                             <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
@@ -96,17 +96,16 @@ const Question2 = ({page, handleScore, handleNext, obj}) => {
                         <Card className="card-mdf">
                           <Card.Body>
                             <Card.Title>
-                            <p>Alliance Mechanical Services, LLC</p>
-                              <div>
-                                <div>
-                                  <div>
+                            <p className='bg-primary py-3 m-0 text-white container-fluid'>Alliance Mechanical Services, LLC</p>
+                              <div className='flex-mdf d-flex justify-content-around m-0 align-items-center'>
+                                <div className="d-flex  align-items-center">
+                                  <div className='d-flex flex-column justify-content-end'>
                                     <h4>Invoice</h4>
-                                    <p>Due: 07/15/2021</p>
+                                    <p>321464</p>
                                   </div>
+                                  <p className='text-danger px-4'>Due: 07/15/2021</p>
                                 </div>
-                                <div>
-                                  <h4>Amount Due: $8,015.50</h4>
-                                </div>
+                                <h3 >Amount Due: <span className='text-success'>$8,015.50</span></h3>                                
                               </div>
                             </Card.Title>
                             <div>

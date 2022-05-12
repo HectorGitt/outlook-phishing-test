@@ -17,7 +17,7 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
     
   }
   const handleCorrect = (e) => {
-    if(e.target.value === obj[page]){
+    if(e.target.value === obj[page-1]){
       handleScore()
       setCorrect(true)
       
@@ -58,7 +58,7 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
                 <h1 className='text-white'>
                     {(step === 0)?
                     "Uh oh! It looks like you're out of storage!" 
-                    : (correct)? <Correct /> : "This is actually a phishing email." }</h1> 
+                    : (correct)? <Correct /> : "Incorrect. Not everything is bad!" }</h1> 
                 {(step === 0)?
                 <>
                 <p>I wonder what it costs to upgrade?</p>
@@ -72,7 +72,7 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
                 </>
                 :
                 <>
-                <p>It looks like you missed the fishy look-alike URL. The real domain is “sytez.net”, but it is designed to look like Google Drive. Remember to be especially cautious if you aren't sure you know the sender.</p>
+                <p>This is a legitimate Dropbox communication. The sender is “dropboxmail.com”, which is unusual but legitimate, and the URL is a secure link (https) to “dropbox.com”. If you are unsure about a domain, you can use a search engine to find out more information.</p>
                 <ShowMe handleStep={handleStep}/>
                 </>) 
                 }
@@ -83,21 +83,31 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
           <ToastWrapper >
                 <Card.Body>
                     <Card.Title>
-                        <MailSubject/>
+                        <MailSubject props="Dropbox <no-reply@dropboxmail.com>" acronym="D"/>
+                        <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
+                          <Toast.Body>
+                            <p>   A quick search for “dropboxmail.com” will show that it’s legitimate.   </p>
+                            <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
+                            
+                          </Toast.Body>
+                        </Toast>
                     </Card.Title>
-                    <Card.Text className='position relative' >
-                        <p className="text-center text-lg"> <FaDropbox/> </p>
+                    <Card.Text className='' >
+                        <p className="text-center text-primary icon"> <FaDropbox/> </p>
                         <p>Hi,</p>
                         <p>Your Dropbox is full and is no longer syncing files. New files added to your Dropbox folder wont be accessible on your other devices and wont be backed up online</p>
                         <p>Upgrade your dropbox today and get 1 TB(1000GB) of space and powerful sharing features.</p>
-                        <Button className="mx-auto w-50 text-center">Upgrade Your Dropbox</Button>
-                        <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
+                        <div className='d-grid mx-auto col-4 position-relative'><Button className="my-2">Upgrade Your Dropbox</Button>
+                        <Toast show={showpop2} className="position-absolute top-100  shadow z-index-5">
                           <Toast.Body>
                             <p>   The URL is a legitimate, secure link to “dropbox.com”.   </p>
                             <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
                             
                           </Toast.Body>
                         </Toast>
+                        </div>
+                        
+                        
                         <p>For otherways to get more space. Visit our Get More Space page</p>
                         <p>Happy Dropboxing!</p>
                         <p>- The Dropbox Team</p>

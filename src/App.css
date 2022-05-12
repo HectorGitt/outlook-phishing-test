@@ -34,6 +34,7 @@ input {
 .flex-div {
   display: flex;
   align-items: center;
+  column-gap: 10px;
 }
 .flex-div p {
   margin-left: 20px;
@@ -43,24 +44,37 @@ input {
 }
 .attachment {
   border: 1px solid rgba(0, 0, 0, 0.253);
-  margin: 30px 60px;
-  height: 50px;
+  margin: 30px auto;
+  height: 70px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding: 1rem 1rem;
+  width: fit-content;
 }
 .attachment img {
   width: 20px;
+}
+.attachment p {
+  margin-left: 30px;
+  font-size: 1.2rem;
 }
 .z-index-5 {
   z-index: 9000;
 }
 .toast-top {
-  transform: translateY(-5vh);
+  transform: translateY(-7%);
   background-color: rgb(255, 255, 255);
   box-shadow: none;
 }
 .flexible {
   display: flex !important;
   flex-direction: column-reverse !important;
+}
+.flex-mdf {
+
+  background-color: #9ecafc;
+}
+.icon {
+  font-size: 2rem;
 }

@@ -66,7 +66,7 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
                 : 
                 ((correct)?
                 <>
-                <p>This phish used a look-alike URL to masquerade as Gmail. In fact, this is almost identical to an attack used to successfully hack politicians’ emails. Always be sure to check URLs carefully!</p>
+                <p>This is almost identical to an attack used to successfully hack politicians’ emails. Always be sure to check URLs carefully!</p>
                 <ShowMe handleStep={handleStep}/>
                 </>
                 :
@@ -82,7 +82,7 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
             <ToastWrapper>
                 <Card.Body>
                     <Card.Title className='position-relative'>
-                        <MailSubject/>
+                        <MailSubject props="Google <no-reply@google.support>" acronym="G" />
                         <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>
                             <p>The sender address “google.support” isn’t used.</p>
@@ -92,16 +92,18 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
                         </Toast>                        
                     </Card.Title>
                     <Card.Text >
-                        <h4>Someone has your password</h4>
+                        <h4 className='pt-5 mt-4 pb-2 bg-danger px-3 text-white'>Someone has your password</h4>
                         <p>Hi,</p>
                         <p>Someone just used your password to try to sign in to your Outlook account.</p>
                         <div>
                             <h5>Information:</h5>
-                            <p>Tuesday,10 May 2022 at 23:58:03 GMT +01:00</p>
-                            <p>Slatina, Romania</p>
-                            <p>Firefox Browser</p>
+                              <small className='d-block' >Tuesday,10 May 2022 at 23:58:03 GMT +01:00 <br />
+                                Slatina, Romania <br />
+                                Firefox Browser
+                               </small>
                         </div>
                         <div>
+                          <p className='mt-4'>Outlook stopped the sign in attempt</p>
                         <Button className="">Change     Password</Button>
                         <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>

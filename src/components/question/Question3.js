@@ -57,17 +57,17 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
                 
             <h1 className='text-white'>
                     {(step === 0)?
-                    "You've received a fax!" 
+                    "Time for a trip down memory lane!" 
                     : (correct)? <Correct /> : "This is actually a phishing email." }</h1> 
                 {(step === 0)?
                 <>
-                <p>We know you're excited, but take your time.</p>
+                <p>Remember TK from school?</p>
                 <Options handleCorrect={handleCorrect}/> 
                 </>
                 : 
                 ((correct)?
                 <>
-                <p>Well spotted! As you saw, the sender's email domain is misspelled as “efacks” and the link actually points to “mailru382.co”. Phishing often tries to trick you with look-alike URLs.</p>
+                <p>Looks like you spotted the look-alike URL. The real domain is “sytez.net”, which is disguised to look like Google Drive. Remember to be especially cautious if you aren't sure you know the sender.</p>
                 <ShowMe handleStep={handleStep}/>
                 </>
                 :

@@ -6,6 +6,7 @@ import Options from '../buttons/Options';
 import ShowMe from '../buttons/ShowMe';
 import ToastWrapper from '../layout/ToastWrapper';
 import { FaRegShareSquare, FaFilePdf } from "react-icons/fa";
+import pdf from "../../images/pdf.png"
 
 
 const Question1 = ({handleNext,page, obj, handleScore}) => {
@@ -54,34 +55,56 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
         </Navbar>
         <Container fluid className="vh-75 w-100 Container d-flex flex-column justify-content-center align-items-center">
             <div className="text-center container-fluid form_details my-5 ">   
-                <h1 className='text-white'>
+                {/* <h1 className='text-white'>
                   {(step === 0)?
                   "Let's start with this Outlook Doc email." 
                   : (correct)? <Correct /> : "This is actually a phishing email." }</h1> 
                 <p>Be sure to check out link URLs by hovering or using long presses, and to explore the email addresses. Don't worry, none of the links will work - we don't want to send you anywhere funny!</p>
-                {(step === 0)?<Options handleCorrect={handleCorrect}/> : <ShowMe handleStep={handleStep}/>}
+                <p>You must have spotted the look-alike URL. Be cautious about hyperlinks and attachments you open from emails — they may direct you to fraudulent websites where you're asked to input sensitive information.</p>
+                {(step === 0)?<Options handleCorrect={handleCorrect}/> : <ShowMe handleStep={handleStep}/>} */}
+                <h1 className='text-white'>
+                    {(step === 0)?
+                    "Let's start with this Outlook Doc email." 
+                    : (correct)? <Correct /> : "This is actually a phishing email." }</h1> 
+                {(step === 0)?
+                <>
+                <p>Be sure to check out link URLs by hovering or using long presses, and to explore the email addresses. Don't worry, none of the links will work - we don't want t</p>
+                <Options handleCorrect={handleCorrect}/> 
+                </>
+                : 
+                ((correct)?
+                <>
+                <p>You must have spotted the look-alike URL. Be cautious about hyperlinks and attachments you open from emails — they may direct you to fraudulent websites where you're asked to input sensitive information.</p>
+                <ShowMe handleStep={handleStep}/>
+                </>
+                :
+                <>
+                <p>The sender's email domain is misspelled as “efacks” and the link actually points at “mailru382.co”. Phishing often tries to trick you with look-alike URLs.</p>
+                <ShowMe handleStep={handleStep}/>
+                </>) 
+                }
                 
            </div>
            <Container fluid className="vh-75 bg-white">
             <ToastWrapper>
                 <Toast.Body >
                     <Card.Title >
-                    <MailSubject />
+                    <MailSubject props="Luke Johnson <luke.json8000@gmail.com>" acronym="L" />
                     </Card.Title>
-                    <div >
-                      <div className='w-50 mx-auto'>
-                        <Card className="text-center card-mdf">
+                    <div>
+                      <div className='container w-lg-50 w-sm-100 w-100 mx-auto'>
+                        <Card className="text-center card-mdf w-lg-50 w-100 mx-auto">
                             <Card.Body className='position-relative'>
                                 <Card.Title>
-                                    <p> <FaRegShareSquare/> </p>
+                                    <p className='text-primary'> <FaRegShareSquare/> </p>
                                     <p>Someone Shared Something to you</p>
                                 </Card.Title>
                                 <div>
                                 dgdgdggdgd shared "dbjdjhddbbndbndbnbndbndbndbn" to you
                                 </div>
                                 <div className="attachment">
-                                    <p> <FaFilePdf/> </p>
-                                    <p>adjfjjff.pdf</p>
+                                    <img src={pdf} className="fluid" alt="" />
+                                    <p>237888839383918727892892.pdf</p>
                                 </div>
                                 <Button variant="primary">Open</Button>
                                 <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
