@@ -61,7 +61,7 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
                   : (correct)? <Correct /> : "This is actually a phishing email." }</h1> 
                 <p>Be sure to check out link URLs by hovering or using long presses, and to explore the email addresses. Don't worry, none of the links will work - we don't want to send you anywhere funny!</p>
                 <p>You must have spotted the look-alike URL. Be cautious about hyperlinks and attachments you open from emails — they may direct you to fraudulent websites where you're asked to input sensitive information.</p>
-                {(step === 0)?<Options handleCorrect={handleCorrect}/> : <ShowMe handleStep={handleStep}/>} */}
+                {(step === 0)?Options handleCorrect={handleCorrect}/> : <ShowMe handleStep={handleStep} step={step}/>} */}
                 <h1 className='text-white'>
                     {(step === 0)?
                     "Let's start with this Outlook Doc email." 
@@ -75,12 +75,12 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
                 ((correct)?
                 <>
                 <p>You must have spotted the look-alike URL. Be cautious about hyperlinks and attachments you open from emails — they may direct you to fraudulent websites where you're asked to input sensitive information.</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>
                 :
                 <>
                 <p>The sender's email domain is misspelled as “efacks” and the link actually points at “mailru382.co”. Phishing often tries to trick you with look-alike URLs.</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>) 
                 }
                 

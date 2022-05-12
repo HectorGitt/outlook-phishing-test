@@ -62,18 +62,18 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
                 {(step === 0)?
                 <>
                 <p>Remember TK from school?</p>
-                <Options handleCorrect={handleCorrect}/> 
+                Options handleCorrect={handleCorrect}/> 
                 </>
                 : 
                 ((correct)?
                 <>
                 <p>Looks like you spotted the look-alike URL. The real domain is “sytez.net”, which is disguised to look like Google Drive. Remember to be especially cautious if you aren't sure you know the sender.</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>
                 :
                 <>
                 <p>It looks like you missed the fishy look-alike URL. The real domain is “sytez.net”, but it is designed to look like Google Drive. Remember to be especially cautious if you aren't sure you know the sender.</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>) 
                 }
            </div>

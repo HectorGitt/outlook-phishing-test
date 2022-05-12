@@ -61,18 +61,18 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
                 {(step === 0)?
                 <>
                 <p>Usually their emails come from “sharon.mosley@westmountschool.org”.</p>
-                <Options handleCorrect={handleCorrect}/> 
+                Options handleCorrect={handleCorrect}/> 
                 </>
                 : 
                 ((correct)?
                 <>
                 <p>This was a complicated phish! PDFs can contain malware or viruses — always be certain you trust the sender and use your browser or an online service such as Google Drive to open them safely.</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>
                 :
                 <>
                 <p>It looks like you missed the fishy look-alike URL. The real domain is “sytez.net”, but it is designed to look like Google Drive. Remember to be especially cautious if you aren't sure you know the sender.</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>) 
                 }
            </div>

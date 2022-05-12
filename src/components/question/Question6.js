@@ -61,18 +61,18 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
                 {(step === 0)?
                 <>
                 <p>Look carefully before changing your password.</p>
-                <Options handleCorrect={handleCorrect}/> 
+                Options handleCorrect={handleCorrect}/> 
                 </>
                 : 
                 ((correct)?
                 <>
                 <p>This is almost identical to an attack used to successfully hack politicians’ emails. Always be sure to check URLs carefully!</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>
                 :
                 <>
                 <p>This phish used a look-alike URL to masquerade as Gmail. In fact, this is almost identical to an attack used to successfully hack politicians’ emails. Always be sure to check URLs carefully!</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>) 
                 }
 

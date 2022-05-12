@@ -66,12 +66,12 @@ const Question7 = ({page, handleNext, handleScore, obj}) => {
                 ((correct)?
                 <>
                 <p>The hackers tried to use Google to hide the actual link, which is from tinyurl. An email similar to this was used to target think tanks and politicians.</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>
                 :
                 <>
                 <p>This phish used a look-alike URL to masquerade as Gmail. In fact, this is almost identical to an attack used to successfully hack politicians’ emails. Always be sure to check URLs carefully!</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>) 
                 }
            </div>

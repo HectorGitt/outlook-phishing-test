@@ -67,12 +67,12 @@ const Question2 = ({page, handleScore, handleNext, obj}) => {
                 ((correct)?
                 <>
                 <p>Well spotted! As you saw, the sender's email domain is misspelled as “efacks” and the link actually points to “mailru382.co”. Phishing often tries to trick you with look-alike URLs.</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>
                 :
                 <>
                 <p>The sender's email domain is misspelled as “efacks” and the link actually points at “mailru382.co”. Phishing often tries to trick you with look-alike URLs.</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>) 
                 }
                 

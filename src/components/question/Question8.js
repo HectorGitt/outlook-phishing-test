@@ -67,12 +67,12 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
                 ((correct)?
                 <>
                 <p>The hackers tried to use Google to hide the actual link, which is from tinyurl. An email similar to this was used to target think tanks and politicians.</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>
                 :
                 <>
                 <p>This phish used a look-alike URL to masquerade as Gmail. In fact, this is almost identical to an attack used to successfully hack politicians’ emails. Always be sure to check URLs carefully!</p>
-                <ShowMe handleStep={handleStep}/>
+                <ShowMe handleStep={handleStep} step={step}/>
                 </>) 
                 }
                 
@@ -101,10 +101,6 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
                                 </Toast>
                                 </div>
                                 <p className='mt-2'> <img src={outlook} alt="" className='outlook' /> View your email messages and settings <BiErrorCircle/> </p>
-                                <strong>Allow Tripit to do this?</strong>
-                                <div>
-                                <small>You may review this app's terms of service and . You can remove this or any other app connected to your account in </small>
-                                </div>
                                 <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
                                   <Toast.Body>
                                     <p>  This shows what the requesting service can do. Make sure to read it closely before allowing access.  </p>
@@ -112,6 +108,10 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
                                     
                                   </Toast.Body>
                                 </Toast>
+                                <strong>Allow Tripit to do this?</strong>
+                                <div>
+                                <small>You may review this app's terms of service and . You can remove this or any other app connected to your account in </small>
+                                </div>
                                 <Button className="mt-4">Allow</Button>
                             
                                 
