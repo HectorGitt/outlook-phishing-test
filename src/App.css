@@ -32,9 +32,10 @@ input {
   background-color: rebeccapurple;
 }
 .flex-div {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   column-gap: 10px;
+  
 }
 .flex-div p {
   margin-left: 20px;
@@ -83,4 +84,8 @@ input {
 }
 .secure {
   width: 7rem;
+}
+.action-img {
+  width: 30%;
+  float: right;
 }

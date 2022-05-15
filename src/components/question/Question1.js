@@ -6,7 +6,7 @@ import Options from '../buttons/Options';
 import ShowMe from '../buttons/ShowMe';
 import ToastWrapper from '../layout/ToastWrapper';
 import { FaRegShareSquare} from "react-icons/fa";
-import pdf from "../../images/pdf.png"
+import pdf from "../../images/pdf.png";
 
 
 const Question1 = ({handleNext,page, obj, handleScore}) => {
