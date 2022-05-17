@@ -9,7 +9,7 @@ const ToastWrapper = ({children}) => {
         toggleShowA();
     }, [])
   return (
-    <Toast className="container w-lg-50 w-75 toast-top" show={showA}>
+    <Toast className="container w-lg-50 w-75 toast-top toastCont" show={showA}>
         {children}
     </Toast>
   )
