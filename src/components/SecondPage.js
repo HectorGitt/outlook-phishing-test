@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container, Navbar, Toast, ToastContainer, Button } from 'react-bootstrap'
 import { useState, useEffect, useRef } from 'react';
 import { MyVerticallyCenteredModal } from './Modal';
@@ -6,7 +5,7 @@ import validator from 'validator';
 const SecondPage = ({setEmail, setName, handleNext}) => {
     const [showA, setShowA] = useState(false);
     const toggleShowA = () => setShowA(true);
-    const [modalShow, setModalShow] = React.useState(false);
+    const [modalShow, setModalShow] = useState(false);
     const emailRef = useRef()
     const nameRef = useRef()
     
