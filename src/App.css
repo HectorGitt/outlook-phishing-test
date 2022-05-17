@@ -1,3 +1,6 @@
+#root {
+  width: 100vw;
+}
 .Container {
   padding: 0;
   background-color: #599eee;
@@ -45,20 +48,23 @@ input {
 }
 .attachment {
   border: 1px solid rgba(0, 0, 0, 0.253);
-  margin: 30px auto;
+  margin: 10% auto;
   height: 70px;
   cursor: pointer;
   display: flex;
+  gap: 5px;
   align-items: center;
   padding: 1rem 1rem;
+  font-size: 1rem;
   width: fit-content;
+  
 }
 .attachment img {
   width: 20px;
 }
 .attachment p {
-  margin-left: 30px;
-  font-size: 1.2rem;
+  overflow-wrap: break-word;
+  font-size: 1rem;
 }
 .z-index-5 {
   z-index: 9000;
@@ -88,4 +94,11 @@ input {
 .action-img {
   width: 30%;
   float: right;
+}
+p {
+  word-wrap: break-word;
+}
+.toastCont {
+  width: 700px !important;
+  max-width: 100%;
 }
