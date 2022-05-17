@@ -4,7 +4,8 @@ import MailSubject from '../MailSubject';
 import ToastWrapper from '../layout/ToastWrapper';
 import Options from '../buttons/Options';
 import ShowMe from '../buttons/ShowMe';
-import secure from '../../images/secure.png'
+import secure from '../../images/secure.png';
+import LinkWrapper from '../buttons/LinkWrapper';
 
 const Question7 = ({page, handleNext, handleScore, obj}) => {
     const [step, setStep] = useState(0)
@@ -80,7 +81,7 @@ const Question7 = ({page, handleNext, handleScore, obj}) => {
             <ToastWrapper>
                 <Card.Body>
                     <Card.Title>
-                        <MailSubject props="Microsoft <no-reply@outlook.support" acronym="M" />
+                        <MailSubject cc="jsjdjjwmwmbnbw" props="Microsoft <no-reply@outlook.support" acronym="M" />
                         <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>
                             <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
@@ -102,7 +103,7 @@ const Question7 = ({page, handleNext, handleScore, obj}) => {
                         <h4>Governemnt-backed attackers may be trying to steal your password</h4>
                         <p>There's a chance that this is a false alarm, but we believe that we detected government-backed attackers trying to steal your password. This happens to less then 0.1% of all Gmail users. We can't reveal what tipped us off because the attackers will take note and change their tactics, but if they are successful at some point they could access your data or take other actions using your account. To further improve your security, based on your current settings, we recommend:</p>
                         <div className='position-relative'>
-                        <Button className="">Change Password</Button>
+                        <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9" >Change Password</LinkWrapper>
                         <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>
                             <p> This is tricky, but the link is actually a redirect to something on “tinyurl.com”. </p>

@@ -5,6 +5,7 @@ import Correct from '../Correct';
 import ToastWrapper from '../layout/ToastWrapper';
 import Options from '../buttons/Options';
 import ShowMe from '../buttons/ShowMe';
+import LinkWrapper from '../buttons/LinkWrapper';
 
 
 const Question2 = ({page, handleScore, handleNext, obj}) => {
@@ -82,7 +83,7 @@ const Question2 = ({page, handleScore, handleNext, obj}) => {
           <ToastWrapper>
                 <Toast.Body>
                     <Card.Title>
-                        <MailSubject/>
+                        <MailSubject cc="http://182.u74.u72389.283o9" props="euidh@hsks.com" acronym="E"/>
                         <Toast  show={showpop} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>
                             <p> The sender address is “efacks.com”, which is misspelled. On the next question, try exploring the header for more details.</p>
@@ -114,7 +115,7 @@ const Question2 = ({page, handleScore, handleNext, obj}) => {
                               <p>Thank you for your business, we appreciate it very much</p>
                               <p>Sincerely,</p>
                               <h4>Alliance Mechanical Services, LLC</h4>
-                              <Button>Open this fax</Button>
+                              <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9" >Open this fax</LinkWrapper>
                               <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
                                 <Toast.Body>
                                   <p>  The link is actually “mailru382.co”, which you can see at the end of the domain name — not at all what you’d expect. </p>

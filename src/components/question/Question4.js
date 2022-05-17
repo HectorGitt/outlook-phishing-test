@@ -5,6 +5,7 @@ import MailSubject from '../MailSubject';
 import Options from '../buttons/Options';
 import ShowMe from '../buttons/ShowMe';
 import ToastWrapper from '../layout/ToastWrapper';
+import LinkWrapper from '../buttons/LinkWrapper';
 
 const Question4 = ({page, handleNext, obj, handleScore}) => {
   const [step, setStep] = useState(0)
@@ -82,7 +83,7 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
           <ToastWrapper >
                 <Card.Body>
                     <Card.Title>
-                        <MailSubject props="Dropbox <no-reply@dropboxmail.com>" acronym="D"/>
+                        <MailSubject cc="http://182.u74.u72389.283o9" props="Dropbox <no-reply@dropboxmail.com>" acronym="D"/>
                         <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>
                             <p>   A quick search for “dropboxmail.com” will show that it’s legitimate.   </p>
@@ -96,7 +97,7 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
                         <p>Hi,</p>
                         <p>Your Dropbox is full and is no longer syncing files. New files added to your Dropbox folder wont be accessible on your other devices and wont be backed up online</p>
                         <p>Upgrade your dropbox today and get 1 TB(1000GB) of space and powerful sharing features.</p>
-                        <div className='d-grid mx-auto col-4 position-relative'><Button className="my-2">Upgrade Your Dropbox</Button>
+                        <div className='d-grid mx-auto col-4 position-relative'><LinkWrapper  className="my-2" to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9" >Upgrade Your Dropbox</LinkWrapper>
                         <Toast show={showpop2} className="position-absolute top-100  shadow z-index-5">
                           <Toast.Body>
                             <p>   The URL is a legitimate, secure link to “dropbox.com”.   </p>

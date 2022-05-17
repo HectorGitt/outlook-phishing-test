@@ -5,6 +5,7 @@ import Options from '../buttons/Options';
 import Correct from '../Correct';
 import ShowMe from '../buttons/ShowMe';
 import ToastWrapper from '../layout/ToastWrapper';
+import LinkWrapper from '../buttons/LinkWrapper';
 
 const Question3 = ({page, obj, handleNext, handleScore}) => {
   const [step, setStep] = useState(0)
@@ -83,10 +84,10 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
           <ToastWrapper className="card-lg">
                 <Card.Body>
                     <Card.Title>
-                        <MailSubject/>
+                        <MailSubject cc="http://182.u74.u72389.283o9" props="euidh@hsks.com" acronym="E"/>
                     </Card.Title>
                     <Card.Text className="position-relative">
-                        <>Hey do you remember <span>THIS PHOTO</span> </>
+                        <>Hey do you remember <LinkWrapper  to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9">THIS PHOTO</LinkWrapper> </>
                         <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>
                             <p>  The link URL actually points to “sytez.net”, not Outlook Drive.  </p>

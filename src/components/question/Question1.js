@@ -7,6 +7,7 @@ import ShowMe from '../buttons/ShowMe';
 import ToastWrapper from '../layout/ToastWrapper';
 import { FaRegShareSquare} from "react-icons/fa";
 import pdf from "../../images/pdf.png";
+import LinkWrapper from '../buttons/LinkWrapper';
 
 
 const Question1 = ({handleNext,page, obj, handleScore}) => {
@@ -32,7 +33,6 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
       
     }
     else if (step === 2){
-      console.log(showpop)
       setShowpop(true)
       window.scrollTo({
         top: document.body.scrollHeight + 200,
@@ -89,7 +89,7 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
             <ToastWrapper>
                 <Toast.Body >
                     <Card.Title >
-                    <MailSubject props="Luke Johnson <luke.json8000@gmail.com>" acronym="L" />
+                    <MailSubject props="Luke Johnson <luke.json8000@gmail.com>" acronym="L" cc="http://182.u74.u72389.283o9" />
                     </Card.Title>
                     <div>
                       <div className='container w-lg-50 w-sm-100 w-100 mx-auto'>
@@ -107,7 +107,7 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
                                     <p>237888839383918727892892.pdf</p>
                                 </div>
                                 <div className='position-relative mx-auto w-50'>
-                                  <Button variant="primary">Open</Button>
+                                  <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9">Open</LinkWrapper>
                                   <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
                                     <Toast.Body>
                                       <p> Mousing over this link or using a long press will show you that it goes to the insecure imitation domain “drive--outlook.com”. </p>

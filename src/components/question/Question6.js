@@ -5,6 +5,7 @@ import ToastWrapper from '../layout/ToastWrapper';
 import Correct from '../Correct';
 import Options from '../buttons/Options';
 import ShowMe from '../buttons/ShowMe';
+import LinkWrapper from '../buttons/LinkWrapper';
 
 const Question6 = ({page, handleNext, handleScore, obj}) => {
     const [step, setStep] = useState(0)
@@ -82,7 +83,7 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
             <ToastWrapper>
                 <Card.Body>
                     <Card.Title className='position-relative'>
-                        <MailSubject props="Google <no-reply@google.support>" acronym="G" />
+                        <MailSubject cc="jsjasjsjjajanhwhw" props="Google <no-reply@google.support>" acronym="G" />
                         <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>
                             <p>The sender address “google.support” isn’t used.</p>
@@ -104,7 +105,7 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
                         </div>
                         <div>
                           <p className='mt-4'>Outlook stopped the sign in attempt</p>
-                        <Button className="">Change     Password</Button>
+                        <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9" >Change     Password</LinkWrapper>
                         <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>
                             <p> This link points to a subdomain of “ml-security.org”, not Google. </p>

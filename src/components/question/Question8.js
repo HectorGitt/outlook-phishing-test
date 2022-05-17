@@ -6,6 +6,7 @@ import ShowMe from '../buttons/ShowMe';
 import logo from '../../images/microsoft-logo-png-2396.png'
 import outlook from '../../images/outlook.png'
 import {BiErrorCircle} from 'react-icons/bi'
+import LinkWrapper from '../buttons/LinkWrapper';
 
 const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
     const [step, setStep] = useState(0)
@@ -112,7 +113,7 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
                                 <div>
                                 <small>You may review this app's terms of service and . You can remove this or any other app connected to your account in </small>
                                 </div>
-                                <Button className="mt-4">Allow</Button>
+                                <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9" >Allow</LinkWrapper>
                             
                                 
                             </Card.Body>
