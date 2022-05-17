@@ -3,7 +3,7 @@ import outlookHeader from "../images/outlook-layout.png";
 import outlookAction from "../images/outlook-action.png"
 
 
-const MailSubject = ({props, acronym}) => {
+const MailSubject = ({props, acronym, cc}) => {
   return (
     <>
     <img className='container-fluid' src={outlookHeader} alt="" />
@@ -13,6 +13,7 @@ const MailSubject = ({props, acronym}) => {
         </div>
         <div className='fluid'>
             <small className='d-block '> From: {props} </small>
+            <small className='d-block'>CC: {cc}</small>
         </div>
         
     </div>
