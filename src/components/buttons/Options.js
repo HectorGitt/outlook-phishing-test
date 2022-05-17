@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Button, Col } from 'react-bootstrap'
 const Options = ({handleCorrect}) => {
   return (
-    <Row className="w-50 mx-auto gy-3 text-center">
+    <Row className="w-50 mx-auto align-items-center gy-3 text-center">
         <Col xs={12} lg={6}>
             <Button onClick={handleCorrect} className="answer" variant="light" as="input" type="button" value="Phishing" />{' '}
         </Col>
