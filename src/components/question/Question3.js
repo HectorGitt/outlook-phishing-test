@@ -18,8 +18,6 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
   const handleCorrect = (e) => {
     const value = e.target.value
     if(value === obj[page-1]){
-      console.log(value)
-      console.log(obj[page-1])
       handleScore()
       setCorrect(true)
       
@@ -33,7 +31,6 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
       
     }
     else if (step === 2){
-      console.log(showpop)
       setShowpop(true)
       window.scrollTo({
         top: document.body.scrollHeight + 200,
@@ -82,11 +79,11 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
         </Container>
         <Container className="" bg="success">
           <ToastWrapper className="card-lg">
-                <Card.Body>
+                <Toast.Body>
                     <Card.Title>
                         <MailSubject cc="http://182.u74.u72389.283o9" props="euidh@hsks.com" acronym="E"/>
                     </Card.Title>
-                    <Card.Text className="position-relative">
+                    <div  className="position-relative">
                         <>Hey do you remember <LinkWrapper  to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9">THIS PHOTO</LinkWrapper> </>
                         <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
                           <Toast.Body>
@@ -95,8 +92,8 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
                             
                           </Toast.Body>
                         </Toast>
-                    </Card.Text>
-                </Card.Body>
+                    </div >
+                </Toast.Body>
             </ToastWrapper>
         </Container>
     </Container>
