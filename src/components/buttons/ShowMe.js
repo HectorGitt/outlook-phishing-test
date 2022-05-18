@@ -4,7 +4,7 @@ const ShowMe = ({handleStep, step}) => {
   return (
     <Row className="w-50 mx-auto p-0">
         <Col>
-            <Button onClick={(step===1) && handleStep} className="px-5" variant="light" as="input" type="button" value="Show Me" />{' '}
+            <Button onClick={(step===1) ? handleStep : undefined} className="px-5" variant="light" as="input" type="button" value="Show Me" />{' '}
         </Col>
     </Row>
   )
