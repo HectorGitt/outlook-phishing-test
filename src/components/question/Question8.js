@@ -84,7 +84,7 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
 
                 <Toast.Body>
                 <div >
-                      <div className='w-50 mx-auto'>
+                      <div className='signin-access mx-auto'>
                         <Card className="card-mdf">
                             <Card.Body className='position-relative'>
                                 <div className="w-25">

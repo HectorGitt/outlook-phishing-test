@@ -92,7 +92,7 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
                           </Toast.Body>
                         </Toast>
                     </Card.Title>
-                    <Card.Text className='' >
+                    <div className='' >
                         <p className="text-center text-primary icon"> <FaDropbox/> </p>
                         <p>Hi,</p>
                         <p>Your Dropbox is full and is no longer syncing files. New files added to your Dropbox folder wont be accessible on your other devices and wont be backed up online</p>
@@ -112,7 +112,7 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
                         <p>Happy Dropboxing!</p>
                         <p>- The Dropbox Team</p>
                         <p>P.S. If you need the biggest plan we've got, check out Dropbox for Business</p>
-                    </Card.Text>
+                    </div>
                 </Card.Body>
             </ToastWrapper>
         </Container>

@@ -92,7 +92,7 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
                           </Toast.Body>
                         </Toast>                        
                     </Card.Title>
-                    <Card.Text >
+                    <div >
                         <h4 className='pt-5 mt-4 pb-2 bg-danger px-3 text-white'>Someone has your password</h4>
                         <p>Hi,</p>
                         <p>Someone just used your password to try to sign in to your Outlook account.</p>
@@ -117,7 +117,7 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
                         <p>Best,</p>
                         <p>The Mail Team</p>
                         
-                    </Card.Text>
+                    </div>
                 </Card.Body>
             </ToastWrapper>
         </Container>

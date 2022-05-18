@@ -98,7 +98,7 @@ const Question7 = ({page, handleNext, handleScore, obj}) => {
                           </Toast.Body>
                         </Toast>
                     </Card.Title>
-                    <Card.Text >
+                    <div >
                         <img src={secure} alt="" className='secure' />
                         <h4>Governemnt-backed attackers may be trying to steal your password</h4>
                         <p>There's a chance that this is a false alarm, but we believe that we detected government-backed attackers trying to steal your password. This happens to less then 0.1% of all Gmail users. We can't reveal what tipped us off because the attackers will take note and change their tactics, but if they are successful at some point they could access your data or take other actions using your account. To further improve your security, based on your current settings, we recommend:</p>
@@ -112,7 +112,7 @@ const Question7 = ({page, handleNext, handleScore, obj}) => {
                           </Toast.Body>
                         </Toast>
                         </div>
-                    </Card.Text>
+                    </div>
                 </Card.Body>
             </ToastWrapper>
         </Container>

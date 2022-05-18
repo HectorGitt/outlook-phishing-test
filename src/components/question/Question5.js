@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { Container, Button, Card, Toast, Navbar} from 'react-bootstrap'; 
+import { Container, Button, Card, Toast, Navbar, Row, Col} from 'react-bootstrap'; 
 import MailSubject from '../MailSubject';
 import ToastWrapper from '../layout/ToastWrapper';
 import pdf from "../../images/pdf.png"
@@ -90,7 +90,7 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
                           </Toast.Body>
                         </Toast>
                     </Card.Title>
-                    <Card.Text >
+                    <div >
                         <p>Good day peppower</p>
                         <p>Please find attached the 2022 financial activity report for your persual</p>
                         <p>Thanks and regards,</p>
@@ -98,24 +98,22 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
                         <p>Westmount Day School</p>
                         <hr />
                         <p>Click here to download pictures. To help protect your privacy, Outlook prevented automatic download of some pictures of this message.</p>
-                        <div className='d-flex' >
-                            <div className='attachment'>
+                        <Row>
+                            <Col className='attachment'>
                                 <img src={pdf} alt="jhk" />
                                 <div>
                                     <span>PPT_Vendor_Matrix_US</span>
                                     <span>758kb</span>
                                 </div>
-                                arrr
-                            </div>
-                            <div className='attachment'>
+                            </Col>
+                            <Col className='attachment'>
                                 <img src={pdf} alt="hj" />
                                 <div>
                                     <span>PPT_Vendor_Matrix_US</span>
                                     <span>758kb</span>
                                 </div>
-                                arrr
-                            </div>
-                        </div>
+                            </Col>
+                        </Row>
                         <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
                         <Toast.Body>
                             <p>Be careful when opening PDFs, especially if you dont expect them.</p>
@@ -123,7 +121,7 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
                             
                           </Toast.Body>
                         </Toast>
-                    </Card.Text>
+                    </div>
                 </Toast.Body>
             </ToastWrapper>
         </Container>
