@@ -5,7 +5,7 @@ import hand from "../images/intro.gif"
 
 const FirstPage = ({handleNext}) => {
   return (
-    <Container fluid className="Container h-full vh-100">
+    <Container fluid className="Container">
         <Navbar className="Navbar p-4" >
             <Container>
             <DropdownButton bg="light" id="dropdown-basic-button" title="Language">
@@ -27,7 +27,7 @@ const FirstPage = ({handleNext}) => {
                     </Button>
                 </Col>
                 <Col xs={12} lg={6} className="">
-                    <img className='mx-auto d-block'  src={hand} alt="hand holding hook" />
+                    <img className='mx-auto d-block fluid'  src={hand} alt="hand holding hook" />
                 </Col>
             </Row>
         </Container>
