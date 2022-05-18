@@ -68,7 +68,7 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
                     : (correct)? <Correct /> : "This is actually a phishing email." }</h1> 
                 {(step === 0)?
                 <>
-                <p>Be sure to check out link URLs by hovering or using long presses, and to explore the email addresses. Don't worry, none of the links will work - we don't want t</p>
+                <p>Be sure to check out link URLs by hovering or using long presses, and to explore the email addresses. Don't worry, none of the links will work - we don't want to send you anywhere funny!</p>
                 <Options handleCorrect={handleCorrect}/> 
                 </>
                 : 
@@ -102,9 +102,9 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
                                 <div>
                                 dgdgdggdgd shared "dbjdjhddbbndbndbnbndbndbndbn" to you
                                 </div>
-                                <div className="attachment">
+                                <div className="attachment container-fluid">
                                     <img src={pdf} className="fluid" alt="" />
-                                    <p>237888839383918727892892.pdf</p>
+                                    <p>783gd88734.pdf</p>
                                 </div>
                                 <div className='position-relative mx-auto w-50'>
                                   <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9">Open</LinkWrapper>
