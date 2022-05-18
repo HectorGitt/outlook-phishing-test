@@ -1,5 +1,7 @@
-#root {
-  width: 100vw;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .Container {
   padding: 0;
@@ -7,15 +9,17 @@
 }
 .Container2 {
   padding: 0;
+  width: 100% !important;
+  overflow-x: hidden !important;
 }
 .Navbar {
   background-color: #327ed4 !important;
 }
 input {
-  padding: 15px !important;
+  padding: 1rem !important;
 }
 .Toast {
-  margin-top: 100px !important;
+  margin-top: 10rem !important;
 }
 .more {
   cursor: pointer;
@@ -27,7 +31,11 @@ input {
 }
 .answer {
   padding: 10px 50px !important;
+  text-align: left !important;
 }
+/* .text-left {
+  text-align: left !important;
+} */
 .circle {
   width: 30px;
   height: 30px;
@@ -61,10 +69,6 @@ input {
 }
 .attachment img {
   width: 20px;
-}
-.attachment p {
-  overflow-wrap: break-word;
-  font-size: 1rem;
 }
 .z-index-5 {
   z-index: 9000;
@@ -100,5 +104,12 @@ p {
 }
 .toastCont {
   width: 850px !important;
+  max-width: 100%;
+}
+small {
+  font-size: small;
+}
+.signin-access {
+  width: 350px !important;
   max-width: 100%;
 }
