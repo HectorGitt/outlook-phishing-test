@@ -48,11 +48,11 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
   
   return (
     <Container fluid className="Container2">
-        <Navbar className="p-4 Navbar">
+        <Navbar className="py-2 px-md-5 Navbar">
             <p className="mx-5 text-white">{page}/8</p>
         </Navbar>
         <Container fluid className="vh-50 w-100 Container d-flex flex-column justify-content-center align-items-center">
-            <div className="text-center container-fluid form_details my-5 ">   
+            <div className="text-center container-fluid header-text my-5 ">   
                 
             <h1 className='text-white'>
                     {(step === 0)?
@@ -80,7 +80,7 @@ const Question3 = ({page, obj, handleNext, handleScore}) => {
         <Container className="" bg="success">
           <ToastWrapper className="card-lg">
                 <Toast.Body>
-                    <Card.Title>
+                    <Card.Title className='position-relative'>
                         <MailSubject cc="http://182.u74.u72389.283o9" props="euidh@hsks.com" acronym="E"/>
                     </Card.Title>
                     <div  className="position-relative">

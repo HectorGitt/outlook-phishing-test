@@ -49,11 +49,11 @@ const Question7 = ({page, handleNext, handleScore, obj}) => {
   }, [step, page, handleNext, showpop])
   return (
     <Container fluid className="Container2">
-        <Navbar className="p-4 Navbar">
+        <Navbar className="py-2 px-md-5 Navbar">
             <p className="mx-5 text-white">{page}/8</p>
         </Navbar>
         <Container fluid className="h-50 Container d-flex flex-column justify-content-center align-items-center">
-            <div className="text-center container-fluid form_details my-5 ">   
+            <div className="text-center container-fluid header-text my-5 ">   
                 <h1 className='text-white'>
                     {(step === 0)?
                     "Your account seems to be under attack again." 
@@ -80,20 +80,12 @@ const Question7 = ({page, handleNext, handleScore, obj}) => {
         <Container className="vh-75" bg="success">
             <ToastWrapper>
                 <Card.Body>
-                    <Card.Title>
+                    <Card.Title className='position-relative'>
                         <MailSubject cc="jsjdjjwmwmbnbw" props="Microsoft <no-reply@outlook.support" acronym="M" />
-                        <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
-                          <Toast.Body>
-                            <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
+                        <Toast show={showpop} className="position-absolute top-25 shadow z-index-5 popup">
                           <Toast.Body>
                             <p>As in the previous question, “google.support” is an unused address.</p>
                             <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
-                            
-                          </Toast.Body>
-                        </Toast>
-                            <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button>
-                            
-                            </div>
                             
                           </Toast.Body>
                         </Toast>
@@ -104,7 +96,7 @@ const Question7 = ({page, handleNext, handleScore, obj}) => {
                         <p>There's a chance that this is a false alarm, but we believe that we detected government-backed attackers trying to steal your password. This happens to less then 0.1% of all Gmail users. We can't reveal what tipped us off because the attackers will take note and change their tactics, but if they are successful at some point they could access your data or take other actions using your account. To further improve your security, based on your current settings, we recommend:</p>
                         <div className='position-relative'>
                         <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9" >Change Password</LinkWrapper>
-                        <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
+                        <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5 popup">
                           <Toast.Body>
                             <p> This is tricky, but the link is actually a redirect to something on “tinyurl.com”. </p>
                             <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>

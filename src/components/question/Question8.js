@@ -50,11 +50,11 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
   }, [step, page, handleNext, showpop])
   return (
     <Container fluid className="Container2">
-        <Navbar className="p-4 Navbar">
+        <Navbar className="py-2 px-md-5 Navbar">
             <p className="mx-5 text-white">{page}/8</p>
         </Navbar>
         <Container fluid className="h-50 Container d-flex flex-column justify-content-center align-items-center">
-            <div className="text-center container-fluid form_details my-5">   
+            <div className="text-center container-fluid header-text my-5">   
             <h1 className='text-white'>
                     {(step === 0)?
                     "Your account seems to be under attack again." 
@@ -93,7 +93,7 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
                                 <h2 className='mt-4'>Hi, {name} </h2>
                                 <p>{email}</p>
                                 <div className='position-relative'>Tripit <strong>wants to</strong>
-                                <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
+                                <Toast show={showpop} className="position-absolute top-25 shadow z-index-5 popup">
                                   <Toast.Body>
                                     <p> This shows you the requesting apps's name, but you should click it to make sure the additional details seem correct.  </p>
                                     <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
@@ -102,7 +102,7 @@ const Question8 = ({page, handleNext, handleScore, obj, email, name}) => {
                                 </Toast>
                                 </div>
                                 <p className='mt-2'> <img src={outlook} alt="" className='outlook' /> View your email messages and settings <BiErrorCircle/> </p>
-                                <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
+                                <Toast show={showpop2} className="position-absolute top-100 shadow z-index-5 popup">
                                   <Toast.Body>
                                     <p>  This shows what the requesting service can do. Make sure to read it closely before allowing access.  </p>
                                     <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>

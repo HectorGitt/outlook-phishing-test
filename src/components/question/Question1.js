@@ -50,11 +50,11 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
   
   return (
     <Container fluid className="Container2">
-        <Navbar className="p-4 Navbar">
+        <Navbar className="py-2 px-md-5 Navbar">
             <p className="mx-5 text-white">{page}/8</p>
         </Navbar>
-        <Container fluid className="vh-75 w-100 Container d-flex flex-column justify-content-center align-items-center">
-            <div className="text-center container-fluid form_details my-5 ">   
+        <Container fluid className="vh-50 w-100 Container d-flex flex-column justify-content-center align-items-center">
+            <div className="text-center header-text my-5 ">   
                 {/* <h1 className='text-white'>
                   {(step === 0)?
                   "Let's start with this Outlook Doc email." 
@@ -106,9 +106,9 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
                                     <img src={pdf} className="fluid" alt="" />
                                     <p>783gd88734.pdf</p>
                                 </div>
-                                <div className='position-relative mx-auto w-50'>
+                                <div className='position-relative mx-auto w-100 '>
                                   <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9">Open</LinkWrapper>
-                                  <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
+                                  <Toast show={showpop} className="position-absolute popup top-25 center shadow z-index-5">
                                     <Toast.Body>
                                       <p> Mousing over this link or using a long press will show you that it goes to the insecure imitation domain “drive--outlook.com”. </p>
                                       <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>

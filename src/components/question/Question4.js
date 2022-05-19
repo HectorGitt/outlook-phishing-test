@@ -50,11 +50,11 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
     
   return (
     <Container fluid className='Container2'>
-        <Navbar className="p-4 Navbar">
+        <Navbar className="py-2 px-md-5 Navbar">
             <p className="mx-5 text-white">{page}/8</p>
         </Navbar>
         <Container fluid className="vh-50 w-100 Container d-flex flex-column justify-content-center align-items-center">
-            <div className="text-center container-fluid form_details my-5 ">   
+            <div className="text-center container-fluid header-text my-5 ">   
                 <h1 className='text-white'>
                     {(step === 0)?
                     "Uh oh! It looks like you're out of storage!" 
@@ -82,9 +82,9 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
         <Container fluid className="" bg="success">
           <ToastWrapper >
                 <Card.Body>
-                    <Card.Title>
+                    <Card.Title className='position-relative'>
                         <MailSubject cc="http://182.u74.u72389.283o9" props="Dropbox <no-reply@dropboxmail.com>" acronym="D"/>
-                        <Toast show={showpop} className="position-absolute top-25 shadow z-index-5">
+                        <Toast show={showpop} className="position-absolute top-25 shadow z-index-5 w-md-50">
                           <Toast.Body>
                             <p>   A quick search for “dropboxmail.com” will show that it’s legitimate.   </p>
                             <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
@@ -97,8 +97,8 @@ const Question4 = ({page, handleNext, obj, handleScore}) => {
                         <p>Hi,</p>
                         <p>Your Dropbox is full and is no longer syncing files. New files added to your Dropbox folder wont be accessible on your other devices and wont be backed up online</p>
                         <p>Upgrade your dropbox today and get 1 TB(1000GB) of space and powerful sharing features.</p>
-                        <div className='d-grid mx-auto col-4 position-relative'><LinkWrapper  className="my-2" to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9" >Upgrade Your Dropbox</LinkWrapper>
-                        <Toast show={showpop2} className="position-absolute top-100  shadow z-index-5">
+                        <div className='d-grid mx-auto col-md-4 col-12 position-relative'><LinkWrapper  className="my-2" to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9" >Upgrade Your Dropbox</LinkWrapper>
+                        <Toast show={showpop2} className="position-absolute top-100 popup mx-auto shadow z-index-5">
                           <Toast.Body>
                             <p>   The URL is a legitimate, secure link to “dropbox.com”.   </p>
                             <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>

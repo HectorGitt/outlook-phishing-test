@@ -49,11 +49,11 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
   }, [step, page, handleNext, showpop])
   return (
     <Container fluid className='Container2' >
-        <Navbar className="p-4 Navbar">
+        <Navbar className="py-2 px-md-5 Navbar">
             <p className="mx-5 text-white">{page}/8</p>
         </Navbar>
         <Container fluid className="h-50 Container d-flex flex-column justify-content-center align-items-center">
-            <div className="text-center container-fluid form_details my-5 ">   
+            <div className="text-center container-fluid header-text my-5 ">   
                 <h1 className='text-white'>
                     {(step === 0)?
                     "You’ve received a new kind of report from the school." 
@@ -114,13 +114,16 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
                                 </div>
                             </Col>
                         </Row>
-                        <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
-                        <Toast.Body>
-                            <p>Be careful when opening PDFs, especially if you dont expect them.</p>
-                            <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
-                            
-                          </Toast.Body>
-                        </Toast>
+                        <div className='d-grid mx-auto col-md-4 col-12 position-relative'>
+                          <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5 popup">
+                          <Toast.Body>
+                              <p>Be careful when opening PDFs, especially if you dont expect them.</p>
+                              <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
+                              
+                            </Toast.Body>
+                          </Toast>
+                        </div>
+                        
                     </div>
                 </Toast.Body>
             </ToastWrapper>

@@ -50,11 +50,11 @@ const Question2 = ({page, handleScore, handleNext, obj}) => {
   }, [step, page, handleNext, showpop])
   return (
     <Container fluid className="Container2">
-        <Navbar className="p-4 Navbar">
+        <Navbar className="py-2 px-md-5 Navbar">
             <p className="mx-5 text-white">{page}/8</p>
         </Navbar>
         <Container fluid className="vh-50 w-100 Container d-flex flex-column justify-content-center align-items-center">
-            <div className="text-center container-fluid form_details my-5 ">   
+            <div className="text-center container-fluid header-text my-5 ">   
                 <h1 className='text-white'>
                     {(step === 0)?
                     "You've received a fax!" 
@@ -80,7 +80,7 @@ const Question2 = ({page, handleScore, handleNext, obj}) => {
            </div>
         </Container>
         <Container fluid className="vh-75" bg="success">
-          <ToastWrapper>
+          <ToastWrapper className="card-lg">
                 <Toast.Body>
                     <Card.Title>
                         <MailSubject cc="http://182.u74.u72389.283o9" props="euidh@hsks.com" acronym="E"/>
@@ -92,40 +92,42 @@ const Question2 = ({page, handleScore, handleNext, obj}) => {
                           </Toast.Body>
                         </Toast>  
                     </Card.Title>
-                    <div >
-                      <div>
-                        <Card className="card-mdf">
+                    <div className='container w-lg-50 w-sm-100 w-100 mx-auto'>
+                      <div  className='w-100' >
+                        <div className="card-mdf w-100 container-fluid">
                           <Card.Body>
                             <Card.Title>
                             <p className='bg-primary py-3 m-0 text-white container-fluid'>Alliance Mechanical Services, LLC</p>
-                              <div className='flex-mdf d-flex justify-content-around m-0 align-items-center'>
-                                <div className="d-flex  align-items-center">
-                                  <div className='d-flex flex-column justify-content-end'>
+                              <div className='flex-mdf d-md-flex justify-content-around m-0 align-items-center'>
+                                <div className="d-md-flex  align-items-center">
+                                  <div className='d-md-flex flex-column justify-content-end'>
                                     <h4>Invoice</h4>
                                     <p>321464</p>
                                   </div>
                                   <p className='text-danger px-4'>Due: 07/15/2021</p>
                                 </div>
-                                <h3 >Amount Due: <span className='text-success'>$8,015.50</span></h3>                                
+                                <strong >Amount Due: <span className='text-success'>$8,015.50</span></strong>                                
                               </div>
                             </Card.Title>
-                            <div>
+                            <div >
                               <h4>Dear Vendor:</h4>
                               <p>Your invoice paymenr is attached. Please review payment confirmation at your earliest convenience</p>
                               <p>Thank you for your business, we appreciate it very much</p>
                               <p>Sincerely,</p>
                               <h4>Alliance Mechanical Services, LLC</h4>
+                              <div className='position-relative '>
                               <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9" >Open this fax</LinkWrapper>
-                              <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
+                              <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5 popup">
                                 <Toast.Body>
                                   <p>  The link is actually “mailru382.co”, which you can see at the end of the domain name — not at all what you’d expect. </p>
                                   <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
                                   
                                 </Toast.Body>
                               </Toast>  
+                              </div>
                             </div>
                           </Card.Body>
-                        </Card>
+                        </div>
                         
                       </div>
                         

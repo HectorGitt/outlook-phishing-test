@@ -11,6 +11,7 @@
   padding: 0;
   width: 100% !important;
   overflow-x: hidden !important;
+  min-height: 100vh;
 }
 .Navbar {
   background-color: #327ed4 !important;
@@ -33,9 +34,9 @@ input {
   padding: 10px 50px !important;
   text-align: left !important;
 }
-/* .text-left {
-  text-align: left !important;
-} */
+.header-text {
+  width: 70%;
+}
 .circle {
   width: 30px;
   height: 30px;
@@ -112,4 +113,13 @@ small {
 .signin-access {
   width: 350px !important;
   max-width: 100%;
+}
+.popup {
+  max-width: 350px !important;
+  width: 100% !important;
+  position: absolute;
+}
+.center {
+  left: 50%;
+  transform: translate(-50%);
 }

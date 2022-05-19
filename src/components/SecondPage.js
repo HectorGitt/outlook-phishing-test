@@ -34,7 +34,7 @@ const SecondPage = ({setEmail, setName, handleNext}) => {
   return (
       
     <Container fluid className="Container2 vh-100">
-        <Navbar className="p-4 Navbar">
+        <Navbar className="py-2 px-md-5 Navbar">
         </Navbar>
         <Container fluid className="h-50 Container d-flex align-items-center">
             <div className="text-center mx-auto form_details">   

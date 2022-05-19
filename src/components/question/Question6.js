@@ -50,11 +50,11 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
 
   return (
     <Container fluid className='Container2'>
-        <Navbar className="p-4 Navbar">
+        <Navbar className="py-2 px-md-5 Navbar">
             <p className="mx-5 text-white">{page}/8</p>
         </Navbar>
         <Container fluid className="h-50 Container d-flex flex-column justify-content-center align-items-center">
-            <div className="text-center container-fluid form_details my-5 ">   
+            <div className="text-center container-fluid header-text my-5 ">   
                 <h1 className='text-white'>
                     {(step === 0)?
                     "Someone has been trying to access your account." 
@@ -103,10 +103,10 @@ const Question6 = ({page, handleNext, handleScore, obj}) => {
                                 Firefox Browser
                                </small>
                         </div>
-                        <div>
+                        <div className='d-grid mx-auto col-md-4 col-12 position-relative'>
                           <p className='mt-4'>Outlook stopped the sign in attempt</p>
                         <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9" >Change     Password</LinkWrapper>
-                        <Toast show={showpop2} className="position-absolute top-25 shadow z-index-5">
+                        <Toast show={showpop2} className="position-absolute top-100 shadow z-index-5 popup">
                           <Toast.Body>
                             <p> This link points to a subdomain of “ml-security.org”, not Google. </p>
                             <div className="text-right"><Button className="text-right" onClick={handleStep} >Next</Button></div>
