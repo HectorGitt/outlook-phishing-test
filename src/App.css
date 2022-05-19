@@ -7,6 +7,11 @@
   padding: 0;
   background-color: #599eee;
 }
+.Container1 {
+  padding: 0;
+  background-color: #599eee;
+  min-height: 100vh;
+}
 .Container2 {
   padding: 0;
   width: 100% !important;
@@ -55,22 +60,35 @@ input {
 .card-mdf {
   background-color: rgb(255, 255, 255)  !important;
 }
+.attachment-div {
+  grid-gap: 10px;
+  padding: 0 20px;
+}
+.attachment-div div {
+  align-items: center;
+}
 .attachment {
   border: 1px solid rgba(0, 0, 0, 0.253);
-  margin: 10% auto;
-  height: 70px;
+  margin: 0 auto;
   cursor: pointer;
   display: flex;
   gap: 5px;
-  align-items: center;
+  justify-content: center;
   padding: 1rem 1rem;
   font-size: 1rem;
   width: fit-content;
   
 }
-.attachment img {
-  width: 20px;
+.attachment img, .pdf-icon {
+  width: 40px;
 }
+.attachment > p {
+  margin-top: 6% !important;
+}
+.attachment .icon-img {
+  align-self: center;
+}
+
 .z-index-5 {
   z-index: 9000;
 }

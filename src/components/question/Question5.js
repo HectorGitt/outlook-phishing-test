@@ -31,6 +31,11 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
     }
     else if (step === 2){
       setShowpop(true)
+      window.scrollTo({
+        top: document.body.scrollHeight - 200,
+        left:0,
+        behavior: 'smooth',
+      })
     }
     else if (step === 3){
       setShowpop(false)
@@ -98,15 +103,15 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
                         <p>Westmount Day School</p>
                         <hr />
                         <p>Click here to download pictures. To help protect your privacy, Outlook prevented automatic download of some pictures of this message.</p>
-                        <Row>
-                            <Col className='attachment'>
+                        <Row className='gx-5 attachment-div'>
+                            <Col className='attachment shadow'>
                                 <img src={pdf} alt="jhk" />
                                 <div>
                                     <span>PPT_Vendor_Matrix_US</span>
                                     <span>758kb</span>
                                 </div>
                             </Col>
-                            <Col className='attachment'>
+                            <Col className='attachment shadow'>
                                 <img src={pdf} alt="hj" />
                                 <div>
                                     <span>PPT_Vendor_Matrix_US</span>

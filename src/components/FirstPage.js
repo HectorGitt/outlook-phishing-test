@@ -5,7 +5,7 @@ import hand from "../images/intro.gif"
 
 const FirstPage = ({handleNext}) => {
   return (
-    <Container fluid className="Container">
+    <Container fluid className="Container1">
         <Navbar className="Navbar p-4" >
             <Container>
             <DropdownButton bg="light" id="dropdown-basic-button" title="Language">

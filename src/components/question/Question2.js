@@ -32,6 +32,11 @@ const Question2 = ({page, handleScore, handleNext, obj}) => {
     }
     else if (step === 2){
       setShowpop(true)
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        left:0,
+        behavior: 'smooth',
+      })
     }
     else if (step === 3){
       setShowpop(false)

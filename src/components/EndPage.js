@@ -31,8 +31,8 @@ const EndPage = ({handleNext, score, name}) => {
                 </Col>
                 <Col xs={12} md={6}  className="">
                     {(score < 5)?
-                    <img className='mx-auto luck-img d-block fluid'  src={fail} alt="hand holding hook" />
-                    : <img className='mx-auto luck-img d-block fluid'  src={pass} alt="hand holding hook" />
+                    <img className='mx-auto luck-img d-block container-fluid'  src={fail} alt="hand holding hook" />
+                    : <img className='mx-auto luck-img d-block container-fluid'  src={pass} alt="hand holding hook" />
                     }
                     
                 </Col>

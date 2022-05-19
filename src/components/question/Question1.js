@@ -102,9 +102,10 @@ const Question1 = ({handleNext,page, obj, handleScore}) => {
                                 <div>
                                 dgdgdggdgd shared "dbjdjhddbbndbndbnbndbndbndbn" to you
                                 </div>
-                                <div className="attachment container-fluid">
-                                    <img src={pdf} className="fluid" alt="" />
+                                <div className="attachment my-5 container-fluid rounded shadow">
+                                    <img src={pdf} className="" alt="" />
                                     <p>783gd88734.pdf</p>
+
                                 </div>
                                 <div className='position-relative mx-auto w-100 '>
                                   <LinkWrapper to="http://182.u74.u72389.283o9" message="http://182.u74.u72389.283o9">Open</LinkWrapper>
