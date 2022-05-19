@@ -29,8 +29,10 @@ function App() {
   ];
   const handleNext = () => {
     if (page !== 9){
+      
       setPage((page) => page + 1)
     } else {
+      setScore(0)
       setPage(0)
     }
   }
