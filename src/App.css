@@ -63,9 +63,8 @@ input {
 .attachment-div {
   grid-gap: 10px;
   padding: 0 20px;
-}
-.attachment-div div {
-  align-items: center;
+  width: 100% !important;
+  max-width: 600px !important;
 }
 .attachment {
   border: 1px solid rgba(0, 0, 0, 0.253);

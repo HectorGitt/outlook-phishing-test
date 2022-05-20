@@ -6,6 +6,8 @@ import pdf from "../../images/pdf.png"
 import Correct from '../Correct';
 import Options from '../buttons/Options';
 import ShowMe from '../buttons/ShowMe';
+import {AiOutlineArrowDown} from 'react-icons/ai'
+import {BiErrorCircle} from 'react-icons/bi'
 
 const Question5 = ({page, handleNext, obj, handleScore }) => {
     const [step, setStep] = useState(0)
@@ -102,21 +104,24 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
                         <p>Mrs Sharon Mosley</p>
                         <p>Westmount Day School</p>
                         <hr />
-                        <p>Click here to download pictures. To help protect your privacy, Outlook prevented automatic download of some pictures of this message.</p>
+                        <p> <BiErrorCircle/> Click here to download pictures. To help protect your privacy, Outlook prevented automatic download of some pictures of this message.</p>
                         <Row className='gx-5 attachment-div'>
                             <Col className='attachment shadow'>
                                 <img src={pdf} alt="jhk" />
-                                <div>
+                                <div className='d-flex flex-column'>
                                     <span>PPT_Vendor_Matrix_US</span>
                                     <span>758kb</span>
                                 </div>
+                                <div className='icon-att' ><AiOutlineArrowDown/></div>
+                                
                             </Col>
                             <Col className='attachment shadow'>
                                 <img src={pdf} alt="hj" />
-                                <div>
+                                <div className='d-flex flex-column'>
                                     <span>PPT_Vendor_Matrix_US</span>
                                     <span>758kb</span>
                                 </div>
+                                <div className='icon-att' ><AiOutlineArrowDown/></div>
                             </Col>
                         </Row>
                         <div className='d-grid mx-auto col-md-4 col-12 position-relative'>
