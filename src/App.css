@@ -62,9 +62,9 @@ input {
 }
 .attachment-div {
   grid-gap: 10px;
-  padding: 0 20px;
   width: 100% !important;
   max-width: 600px !important;
+  margin: 1rem 0 !important;
 }
 .attachment {
   border: 1px solid rgba(0, 0, 0, 0.253);
@@ -73,7 +73,7 @@ input {
   display: flex;
   gap: 5px;
   justify-content: center;
-  padding: 1rem 1rem;
+  padding: 0.3rem 1rem;
   font-size: 1rem;
   width: fit-content;
   
@@ -81,6 +81,7 @@ input {
 .attachment img, .pdf-icon {
   width: 40px;
 }
+
 .attachment > p {
   margin-top: 6% !important;
 }

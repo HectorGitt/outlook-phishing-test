@@ -98,16 +98,10 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
                         </Toast>
                     </Card.Title>
                     <div >
-                        <p>Good day peppower</p>
-                        <p>Please find attached the 2022 financial activity report for your persual</p>
-                        <p>Thanks and regards,</p>
-                        <p>Mrs Sharon Mosley</p>
-                        <p>Westmount Day School</p>
-                        <hr />
-                        <p> <BiErrorCircle/> Click here to download pictures. To help protect your privacy, Outlook prevented automatic download of some pictures of this message.</p>
+                    <p> <BiErrorCircle/> Click here to download pictures. To help protect your privacy, Outlook prevented automatic download of some pictures of this message.</p>
                         <Row className='gx-5 attachment-div'>
-                            <Col className='attachment shadow'>
-                                <img src={pdf} alt="jhk" />
+                            <Col className='attachment'>
+                                <img className='icon2' src={pdf} alt="jhk" />
                                 <div className='d-flex flex-column'>
                                     <span>PPT_Vendor_Matrix_US</span>
                                     <span>758kb</span>
@@ -115,7 +109,7 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
                                 <div className='icon-att' ><AiOutlineArrowDown/></div>
                                 
                             </Col>
-                            <Col className='attachment shadow'>
+                            <Col className='attachment'>
                                 <img src={pdf} alt="hj" />
                                 <div className='d-flex flex-column'>
                                     <span>PPT_Vendor_Matrix_US</span>
@@ -133,6 +127,13 @@ const Question5 = ({page, handleNext, obj, handleScore }) => {
                             </Toast.Body>
                           </Toast>
                         </div>
+                        <p>Good day peppower</p>
+                        <p>Please find attached the 2022 financial activity report for your persual</p>
+                        <p>Thanks and regards,</p>
+                        <p>Mrs Sharon Mosley</p>
+                        <p>Westmount Day School</p>
+                        
+                        
                         
                     </div>
                 </Toast.Body>
